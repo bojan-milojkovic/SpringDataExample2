@@ -22,7 +22,7 @@ public class StudentController {
 	@Autowired
 	private StudentService studentServiceImpl;
 	
-	@RequestMapping(value = "/students", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/all-students", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody List<Student> getAllStudents(){
 		return studentServiceImpl.getAllStudents();
 	}
