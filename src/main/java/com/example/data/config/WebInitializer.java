@@ -16,7 +16,5 @@ public class WebInitializer implements WebApplicationInitializer{
 		
 		ServletRegistration.Dynamic apiSR = sc.addServlet("api-dispatcher", new DispatcherServlet(rootContext));
 		apiSR.setLoadOnStartup(1);
-		/*apiSR.addMapping("/students");
-		apiSR.addMapping("/students/*");*/
 	}
 }
