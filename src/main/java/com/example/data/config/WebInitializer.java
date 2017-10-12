@@ -12,8 +12,7 @@ public class WebInitializer implements WebApplicationInitializer{
 	@Override
 	public void onStartup(ServletContext sc) throws ServletException {
 		AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();
-		rootContext.register(PersistenceContext.class);
-		rootContext.register(AppConfig.class);
+		rootContext.setConfigLocation("com.example.data.config");
 		
 		ServletRegistration.Dynamic apiSR = sc.addServlet("api-dispatcher", new DispatcherServlet(rootContext));
 		apiSR.setLoadOnStartup(1);
